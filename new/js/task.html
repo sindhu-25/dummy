@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task List</h1>
+
+    <input type="text" name="" id="task">
+    <button onclick="fun()">add task</button> <br><br><br>
+
+    <ul id="list"></ul>
+
+    <script>
+        function fun(){
+  let newitem =document.getElementById("task").value
+  let taskitem=document.createElement("li")
+  let unord=document.getElementById("list")
+  taskitem.innerText=newitem
+ unord.append(taskitem)
+ let delitem=document.createElement("button")
+ delitem.innerText="delete"
+ taskitem.append(delitem)
+
+ delitem.addEventListener("click",function(){
+    taskitem.remove()
+ })
+        }
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>
